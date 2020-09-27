@@ -2,11 +2,12 @@
 #This program for validating user registration process.
 echo "Welcome to user registration process."
 read -p "Please enter your first name: " Name
-#Validate user first name.
-pat="^[[:upper:]]{1}[a-z A-Z 0-9]{2}$"
-if [[ $Name =~ $pat ]]
+read -p "Please enter your Last Name: " Last
+#Validating last name
+pat="^[[:upper:]]{1}[a-zA-Z0-9]{2,}$"
+if [[ $First =~ $pat && $Last =~ $pat ]]
 then
-	echo "Valid_name"
+	echo "Valiid_Full_Name"
 else
-	echo "Invalid_name"
+	echo "Invalid_Full_Name"
 fi
