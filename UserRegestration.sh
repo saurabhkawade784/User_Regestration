@@ -16,7 +16,7 @@ Mob_pat="[0-9]{2}[[:space:]|(0-9)][0-9]{10}$"
 Password_pat="^[0-9 A-Z a-z]{8,}"
 if [[ $First =~ $Name_pat && $Last =~ $Name_pat && $Email_Address =~ $Email_pat && $Mobile_Number =~ $Mob_pat ]]
 then
-	if [[ $Password =~ $Password_pat && $Password =~ [[:upper:]] ]]
+	if [[ $Password =~ $Password_pat && $Password =~ [[:upper:]] && $Password =~ [[:lower:]] ]]
 	then
 		echo "Valid_Information"
 	else
